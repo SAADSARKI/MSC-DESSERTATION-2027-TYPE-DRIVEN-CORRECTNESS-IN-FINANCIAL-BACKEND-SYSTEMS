@@ -14,6 +14,7 @@ import glob
 import json
 import os
 import subprocess
+import sys
 import time
 
 from checker import check_run
@@ -74,6 +75,10 @@ def main() -> None:
     summary["_seconds"] = round(time.time() - t0, 1)
     with open(os.path.join(DATA, "equivalence_report.json"), "w") as fh:
         json.dump(summary, fh, indent=1)
+    rejected = [n for n, r in summary.items() if isinstance(r, dict) and not r["accepted"]]
+    if rejected:
+        print("NOT ACCEPTED:", ", ".join(rejected))
+    sys.exit(1 if rejected else 0)
 
 
 if __name__ == "__main__":

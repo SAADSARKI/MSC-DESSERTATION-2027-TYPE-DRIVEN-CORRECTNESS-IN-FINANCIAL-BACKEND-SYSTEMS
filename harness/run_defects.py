@@ -30,7 +30,7 @@ from model import read_csv, run
 from mutate import PROGRAMS, generate
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-WORK = os.path.abspath(os.path.join(ROOT, "..", "runs"))
+WORK = os.path.join(ROOT, "runs")  # working copies and build output (git-ignored)
 DATA = os.path.join(ROOT, "data")
 CRATE = {"rust_typed": ("bank_typed", "bank_typed_runner"), "rust_plain": ("bank_plain", "bank_plain_runner")}
 
@@ -49,7 +49,8 @@ def test(cmd: list[str], cwd: str, data) -> tuple[str, str]:
     """Return (class, detail)."""
     for f, ops, exp in data:
         try:
-            p = subprocess.run(cmd + [f], cwd=cwd, capture_output=True, text=True, timeout=20)
+            p = subprocess.run(cmd + [f], cwd=cwd, capture_output=True, text=True, timeout=20,
+                               env=dict(os.environ, PYTHONDONTWRITEBYTECODE="1"))
         except subprocess.TimeoutExpired:
             return "testing", f"{os.path.basename(f)}: timeout"
         out = p.stdout.splitlines()
@@ -57,7 +58,8 @@ def test(cmd: list[str], cwd: str, data) -> tuple[str, str]:
         if p.returncode != 0:
             err = (p.stderr.strip().splitlines() or [""])[-1][:160]
             if "panicked" in p.stderr:
-                err = next((l for l in p.stderr.splitlines() if "panicked" in l or "attempt to" in l), err)[:160]
+                err = next((l for l in p.stderr.splitlines() if "panicked" in l or "attempt to" in l), err)
+                err = re.sub(r"thread '([^']*)' \(\d+\)", r"thread '\1'", err)[:160]  # drop the varying thread id
             return "testing", f"{name}: crash (exit {p.returncode}) {err}"
         viol = check_run(ops, out)
         diff = next((i for i, (a, b) in enumerate(zip(out, exp)) if a != b), None)
@@ -124,7 +126,10 @@ def main(program: str) -> None:
             my = subprocess.run(["mypy", "--strict", "--no-incremental", "bank"], cwd=ws, capture_output=True, text=True)
             my_err = my.returncode != 0
             my_det = next((l for l in my.stdout.splitlines() if ": error:" in l), "")[:200]
-            cls, det = test([sys.executable, "-m", "bank.runner"], ws, data)
+            # -B: no bytecode cache. A cached .pyc is validated only by the source's
+            # mtime (whole seconds) and size, so two same-sized mutants of one file
+            # written within one second would otherwise run the earlier mutant.
+            cls, det = test([sys.executable, "-B", "-m", "bank.runner"], ws, data)
             base = dict(program=program, profile="", mutant=m.id, kind=m.kind, operator=m.operator, line=m.line,
                         before=m.before.replace("\n", " ")[:200], after=m.after.replace("\n", " ")[:200],
                         build_warnings=0, seconds=round(time.time() - t0, 2))

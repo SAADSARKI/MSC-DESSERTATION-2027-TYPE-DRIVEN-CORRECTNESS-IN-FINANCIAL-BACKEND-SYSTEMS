@@ -176,6 +176,27 @@ def main() -> None:
     with open(os.path.join(DATA, "validation_report.json"), "w") as f:
         json.dump(report, f, indent=1)
     print(json.dumps(report, indent=1))
+    problems = failures(report)
+    for p in problems:
+        print("FAIL:", p)
+    sys.exit(1 if problems else 0)
+
+
+def failures(report: dict) -> list[str]:
+    """Conditions under which the data must not be used for the experiment."""
+    out = []
+    rep, seqs, tcs = report["reproducibility"], report["random_sequences"], report["frozen_test_cases"]
+    if not rep["same_seed_identical_files"]:
+        out.append("data cannot be regenerated identically from the seed")
+    if seqs["self_transfers"] != 0:
+        out.append("random sequences contain self-transfers (assumption A6)")
+    if not tcs["expected_outputs_match_oracle"]:
+        out.append("frozen expected outputs differ from the oracle")
+    if tcs["oracle_invariant_violations"]:
+        out.append("the oracle breaks an invariant on the frozen tests")
+    out += [f"boundary not covered: {b}" for b, files in tcs["boundaries"].items() if not files]
+    out += [f"checker misses: {name}" for name, found in report["checker_self_test"].items() if not found]
+    return out
 
 
 if __name__ == "__main__":

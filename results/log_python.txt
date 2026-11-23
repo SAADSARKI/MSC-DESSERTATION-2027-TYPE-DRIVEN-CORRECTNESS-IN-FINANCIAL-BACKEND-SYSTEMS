@@ -70,4 +70,4 @@ python-DS10 mypy testing tc01_create_and_identity.csv: crash (exit 1) TypeError:
 python-DS11 - testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I5'] first at step 5
 python-DS12 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
 python-DS13 - testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
-done python: 144 rows in 84 s -> results/results_python.csv
+done python: 144 rows in 70 s -> results/results_python.csv

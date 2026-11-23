@@ -4,6 +4,7 @@
 
 # Build and tool output
 target/
+runs/
 **/target/
 .venv/
 __pycache__/

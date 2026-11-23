@@ -1,0 +1,7 @@
+# Exact compiler used for the reported results (see results/environment.json).
+# A different compiler version can change error codes and lint behaviour,
+# and therefore the compile-time classification of a defect.
+[toolchain]
+channel = "1.96.0"
+components = ["clippy"]
+profile = "minimal"

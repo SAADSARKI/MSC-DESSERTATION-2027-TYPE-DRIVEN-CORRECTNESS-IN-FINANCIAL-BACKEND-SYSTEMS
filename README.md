@@ -45,30 +45,37 @@ bank-study/
 
 ---
 
+## Quick Start
+
+```bash
+make setup        # create .venv and install the pinned Python tools (requirements.txt)
+make check        # build, clippy, mypy, data validation, equivalence      (~2 min)
+make experiment   # mutants, defect runs for all three programs, summary  (~4 min)
+```
+
+`make all` runs both. Results are written to `results/` (see `results/summary.md`); working copies and
+their build output go to `runs/` (git-ignored). The same `make check` runs on GitHub Actions on every push;
+the full experiment can be started from the Actions tab (workflow `ci`, "Run workflow") and its
+`results/` folder is uploaded as an artifact.
+
 ## Prerequisites
 
 ### Rust
 
-```bash
-# Install via rustup if not present
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-rustup update stable
-```
-
-Requires Rust ≥ 1.70 (uses `let-else`, `?` in closures, `u64::MAX`). No external crates.
+Install [rustup](https://rustup.rs). The exact compiler used for the reported results (**1.96.0**, with
+Clippy) is pinned in `rust/rust-toolchain.toml`; rustup installs it on first use, or explicitly with
+`rustup toolchain install 1.96.0 --profile minimal -c clippy`. The compiler version matters: a different
+version can change error codes and lint behaviour, and so the compile-time classification of a defect.
+No external crates are used.
 
 ### Python
 
-Python ≥ 3.11 required (uses `str | None` union syntax in type hints).
+Python ≥ 3.11 (results produced with 3.14.4). The harness tools are pinned in `requirements.txt`
+(mypy 2.4.1); `make setup` installs them into `.venv`. To run scripts by hand, activate it first:
 
 ```bash
-# Create a virtual environment and install mypy
-python3 -m venv .venv
-source .venv/bin/activate      # Windows: .venv\Scripts\activate
-pip install mypy
+source .venv/bin/activate
 ```
-
-The harness scripts (`equivalence.py`, `run_defects.py`) must be run from inside the venv.
 
 ---
 

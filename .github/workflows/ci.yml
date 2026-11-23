@@ -1,0 +1,64 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      experiment:
+        description: "Also run the full defect experiment and upload results"
+        type: boolean
+        default: true
+
+jobs:
+  check:
+    name: build, lint, validate data, equivalence
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the pinned Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel *= *"\(.*\)"/\1/p' rust/rust-toolchain.toml)
+          rustup toolchain install "$channel" --profile minimal --component clippy
+          cd rust && rustc --version
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Install the pinned Python tools
+        run: pip install -r requirements.txt
+
+      - name: make check
+        run: make check
+
+  experiment:
+    name: defect experiment
+    needs: check
+    if: github.event_name == 'workflow_dispatch' && inputs.experiment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install the pinned Rust toolchain
+        run: |
+          channel=$(sed -n 's/^channel *= *"\(.*\)"/\1/p' rust/rust-toolchain.toml)
+          rustup toolchain install "$channel" --profile minimal --component clippy
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - run: pip install -r requirements.txt
+
+      - name: make experiment
+        run: make experiment
+
+      - name: Compare with the committed results
+        run: git diff --stat -- results/ || true
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: results/
