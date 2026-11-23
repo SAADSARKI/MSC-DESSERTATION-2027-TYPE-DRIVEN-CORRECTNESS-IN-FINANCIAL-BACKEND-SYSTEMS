@@ -1,0 +1,502 @@
+[
+ {
+  "id": "rust_typed-remove_check-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 35,
+  "before": "if value == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-remove_check-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 49,
+  "before": "if s.is_empty() { return Err(BankError::InvalidAccountId); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-remove_check-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 78,
+  "before": "if self.balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-remove_check-04",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 84,
+  "before": "let new_balance = self.balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_balance = self.balance + amount.value(); // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-remove_check-05",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 121,
+  "before": "if self.accounts.contains_key(&id) { return Err(BankError::DuplicateAccount); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-remove_check-06",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 159,
+  "before": "if from_balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-remove_check-07",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 160,
+  "before": "let new_to = to_balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_to = to_balance + amount.value(); // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-change_comparison-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 35,
+  "before": "if value == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": "if value != 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]"
+ },
+ {
+  "id": "rust_typed-change_comparison-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 78,
+  "before": "if self.balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if self.balance <= amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-change_comparison-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 159,
+  "before": "if from_balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if from_balance <= amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-change_arithmetic-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 79,
+  "before": "self.balance -= amount.value();",
+  "after": "self.balance += amount.value();"
+ },
+ {
+  "id": "rust_typed-change_arithmetic-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 84,
+  "before": "let new_balance = self.balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_balance = self.balance.checked_sub(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-change_arithmetic-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 160,
+  "before": "let new_to = to_balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_to = to_balance.checked_sub(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-change_arithmetic-04",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 162,
+  "before": "source.balance -= amount.value(); // [ENF:I2]",
+  "after": "source.balance += amount.value(); // [ENF:I2]"
+ },
+ {
+  "id": "rust_typed-delete_statement-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 79,
+  "before": "self.balance -= amount.value();",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 85,
+  "before": "self.balance = new_balance;",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 123,
+  "before": "self.accounts.insert(id, account);",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-04",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 135,
+  "before": "self.records.push(TransactionRecord {\n            kind: \"deposit\",\n            account: id.clone(),\n            counterparty: None,\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-05",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 147,
+  "before": "self.records.push(TransactionRecord {\n            kind: \"withdraw\",\n            account: id.clone(),\n            counterparty: None,\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-06",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 162,
+  "before": "source.balance -= amount.value(); // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-07",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 164,
+  "before": "destination.balance = new_to; // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-delete_statement-08",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 165,
+  "before": "self.records.push(TransactionRecord {\n            kind: \"transfer\",\n            account: from.clone(),\n            counterparty: Some(to.clone()),\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-ignore_error-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 134,
+  "before": "account.credit(amount)?;",
+  "after": "account.credit(amount);"
+ },
+ {
+  "id": "rust_typed-ignore_error-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 146,
+  "before": "account.debit(amount)?;",
+  "after": "account.debit(amount);"
+ },
+ {
+  "id": "rust_typed-direct_access-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 128,
+  "before": "let account = self.accounts.get(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]",
+  "after": "let account = self.accounts.get(id).unwrap(); // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-direct_access-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 133,
+  "before": "let account = self.accounts.get_mut(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]",
+  "after": "let account = self.accounts.get_mut(id).unwrap(); // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-direct_access-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 145,
+  "before": "let account = self.accounts.get_mut(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]",
+  "after": "let account = self.accounts.get_mut(id).unwrap(); // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-direct_access-04",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 157,
+  "before": "let from_balance = self.accounts.get(from).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]",
+  "after": "let from_balance = self.accounts.get(from).unwrap().balance; // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-direct_access-05",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 158,
+  "before": "let to_balance = self.accounts.get(to).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]",
+  "after": "let to_balance = self.accounts.get(to).unwrap().balance; // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-direct_access-06",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 161,
+  "before": "let source = self.accounts.get_mut(from).ok_or(BankError::AccountNotFound)?;",
+  "after": "let source = self.accounts.get_mut(from).unwrap();"
+ },
+ {
+  "id": "rust_typed-direct_access-07",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 163,
+  "before": "let destination = self.accounts.get_mut(to).ok_or(BankError::AccountNotFound)?;",
+  "after": "let destination = self.accounts.get_mut(to).unwrap();"
+ },
+ {
+  "id": "rust_typed-swap_arguments-01",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 157,
+  "before": "let from_balance = self.accounts.get(from).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]",
+  "after": "let from_balance = self.accounts.get(to).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-02",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 158,
+  "before": "let to_balance = self.accounts.get(to).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]",
+  "after": "let to_balance = self.accounts.get(from).ok_or(BankError::AccountNotFound)?.balance; // [ENF:I4]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-03",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 159,
+  "before": "if from_balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if to_balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-04",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 160,
+  "before": "let new_to = to_balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_to = from_balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-05",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 161,
+  "before": "let source = self.accounts.get_mut(from).ok_or(BankError::AccountNotFound)?;",
+  "after": "let source = self.accounts.get_mut(to).ok_or(BankError::AccountNotFound)?;"
+ },
+ {
+  "id": "rust_typed-swap_arguments-06",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 162,
+  "before": "source.balance -= amount.value(); // [ENF:I2]",
+  "after": "destination.balance -= amount.value(); // [ENF:I2]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-07",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 163,
+  "before": "let destination = self.accounts.get_mut(to).ok_or(BankError::AccountNotFound)?;",
+  "after": "let destination = self.accounts.get_mut(from).ok_or(BankError::AccountNotFound)?;"
+ },
+ {
+  "id": "rust_typed-swap_arguments-08",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 164,
+  "before": "destination.balance = new_to; // [ENF:I2]",
+  "after": "source.balance = new_to; // [ENF:I2]"
+ },
+ {
+  "id": "rust_typed-swap_arguments-09",
+  "program": "rust_typed",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 165,
+  "before": "self.records.push(TransactionRecord {\n            kind: \"transfer\",\n            account: from.clone(),\n            counterparty: Some(to.clone()),\n            amount,\n        });",
+  "after": "self.records.push(TransactionRecord {\n            kind: \"transfer\",\n            account: to.clone(),\n            counterparty: Some(from.clone()),\n            amount,\n        });"
+ },
+ {
+  "id": "rust_typed-DS1",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS1",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 78,
+  "before": "if self.balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-DS2",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS2",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 35,
+  "before": "if value == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-DS3",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS3",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 164,
+  "before": "destination.balance = new_to; // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-DS4",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS4",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 159,
+  "before": "if from_balance < amount.value() { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-DS5",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS5",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 145,
+  "before": "let account = self.accounts.get_mut(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]\n        account.debit(amount)?;",
+  "after": "let account = self.accounts.get_mut(id).unwrap();\n        account.debit(amount)?;"
+ },
+ {
+  "id": "rust_typed-DS6",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS6",
+  "file": "rust/bank_typed/src/main.rs",
+  "line": 36,
+  "before": "let amount = Amount::new(amount?)?;\n    let id = existing_id(account)?;\n    service.deposit(",
+  "after": "let amount = Amount::new(-(amount? as i64))?;\n    let id = existing_id(account)?;\n    service.deposit("
+ },
+ {
+  "id": "rust_typed-DS7",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS7",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 121,
+  "before": "if self.accounts.contains_key(&id) { return Err(BankError::DuplicateAccount); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_typed-DS8",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS8",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 146,
+  "before": "account.debit(amount)?;",
+  "after": "account.debit(amount);"
+ },
+ {
+  "id": "rust_typed-DS9",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS9",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 84,
+  "before": "let new_balance = self.balance.checked_add(amount.value()).ok_or(BankError::BalanceLimitExceeded)?; // [ENF:I1]",
+  "after": "let new_balance = self.balance + amount.value();"
+ },
+ {
+  "id": "rust_typed-DS10",
+  "program": "rust_typed",
+  "kind": "scenario",
+  "operator": "DS10",
+  "file": "rust/bank_typed/src/lib.rs",
+  "line": 122,
+  "before": "Account { id: id.clone(), balance: 0 }",
+  "after": "Account { id: id.clone() }"
+ }
+]

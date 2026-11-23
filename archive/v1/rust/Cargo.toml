@@ -1,0 +1,3 @@
+[workspace]
+members = ["bank_typed", "bank_plain"]
+resolver = "2"

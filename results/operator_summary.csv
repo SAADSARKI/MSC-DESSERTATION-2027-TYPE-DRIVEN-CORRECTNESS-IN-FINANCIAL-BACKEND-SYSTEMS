@@ -1,0 +1,9 @@
+operator,Rust-Typed (compile/mypy/test/missed),Rust-Plain (compile/mypy/test/missed),Python-Runtime (compile/mypy/test/missed),Python-Static (compile/mypy/test/missed)
+change_arithmetic,0/0/4/0,0/0/6/0,0/0/7/0,0/0/7/0
+change_comparison,0/0/3/0,0/0/7/0,0/0/8/0,0/0/8/0
+delete_statement,0/0/22/0,0/0/22/0,0/0/22/0,0/0/22/0
+direct_access,0/0/1/0,0/0/1/0,0/0/1/0,0/0/1/0
+ignore_error,2/0/0/0,0/0/2/0,0/0/2/0,0/0/2/0
+remove_check,0/0/7/0,0/0/9/0,0/0/10/0,0/1/9/0
+swap_arguments,2/0/7/0,2/0/7/0,0/0/9/0,0/0/9/0
+TOTAL,4/0/44/0,2/0/54/0,0/0/59/0,0/1/58/0

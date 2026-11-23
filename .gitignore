@@ -1,0 +1,15 @@
+# Documents are not part of the code repository
+*.docx
+~$*.docx
+
+# Build and tool output
+target/
+**/target/
+.venv/
+__pycache__/
+*.pyc
+.mypy_cache/
+
+# Editor / local settings
+.vscode/
+.env

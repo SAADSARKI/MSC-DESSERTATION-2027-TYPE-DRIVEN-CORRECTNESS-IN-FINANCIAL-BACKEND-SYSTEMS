@@ -1,0 +1,14 @@
+DS,scenario,invariant,origin,Rust-Typed,Rust-Plain,Python-Runtime,Python-Static
+DS1,Withdrawal without funds check,I1,catalogue,test,test,test,test
+DS2,Zero amount accepted,I3,catalogue,test,test,test,test
+DS3,Incomplete transfer,I2,catalogue,test,test,test,test
+DS4,Transfer without funds check,I1,catalogue,test,test,test,test
+DS5,Unchecked account lookup,I4,catalogue,test,test,test,test
+DS6,Negative amount at the boundary,I3,catalogue,compile,compile,test,test
+DS7,Duplicate account identifier,I4,catalogue,test,test,test,test
+DS8,Ignored failure result,"I1,I5",catalogue,compile,test,test,test
+DS9,Numeric overflow on deposit,I1,catalogue,test,test,test,test
+DS10,Account used before initialisation,"I1,I4",catalogue,compile,compile,test,mypy
+DS11,Write outside the unit of work,"I2,I5",industrial,compile,compile,test,test
+DS12,Commit despite a stored error,I5,industrial,test,test,test,test
+DS13,Transaction used after commit,I5,industrial,compile,compile,test,test

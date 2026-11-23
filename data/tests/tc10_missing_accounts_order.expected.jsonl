@@ -1,0 +1,13 @@
+{"step":0,"op":"create","status":"ok","error":null,"value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":1,"op":"deposit","status":"ok","error":null,"value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":2,"op":"balance","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":3,"op":"deposit","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":4,"op":"withdraw","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":5,"op":"transfer","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":6,"op":"transfer","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":7,"op":"transfer","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",50]],"records":1,"last":["deposit","A001","",50]}
+{"step":8,"op":"create","status":"ok","error":null,"value":null,"accounts":[["A001",50],["X999",0]],"records":1,"last":["deposit","A001","",50]}
+{"step":9,"op":"balance","status":"ok","error":null,"value":0,"accounts":[["A001",50],["X999",0]],"records":1,"last":["deposit","A001","",50]}
+{"step":10,"op":"transfer","status":"ok","error":null,"value":null,"accounts":[["A001",0],["X999",50]],"records":2,"last":["transfer","A001","X999",50]}
+{"step":11,"op":"balance","status":"ok","error":null,"value":50,"accounts":[["A001",0],["X999",50]],"records":2,"last":["transfer","A001","X999",50]}
+{"step":12,"op":"balance","status":"ok","error":null,"value":0,"accounts":[["A001",0],["X999",50]],"records":2,"last":["transfer","A001","X999",50]}

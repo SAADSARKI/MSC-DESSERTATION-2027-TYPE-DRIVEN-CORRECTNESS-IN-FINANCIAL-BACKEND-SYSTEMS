@@ -1,0 +1,692 @@
+[
+ {
+  "id": "rust_plain-remove_check-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 13,
+  "before": "if self.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 19,
+  "before": "if amount > M - self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-change_comparison-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 13,
+  "before": "if self.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if self.balance <= amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_comparison-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 19,
+  "before": "if amount > M - self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": "if amount >= M - self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 14,
+  "before": "self.balance -= amount;",
+  "after": "self.balance += amount;"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 19,
+  "before": "if amount > M - self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": "if amount > M + self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-03",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 20,
+  "before": "self.balance += amount;",
+  "after": "self.balance -= amount;"
+ },
+ {
+  "id": "rust_plain-delete_statement-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 14,
+  "before": "self.balance -= amount;",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 20,
+  "before": "self.balance += amount;",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-03",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 53,
+  "before": "self.accounts.insert(account.id.clone(), account);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-04",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 57,
+  "before": "self.records.push(record);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-05",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 82,
+  "before": "self.accounts.push(account);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-06",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 86,
+  "before": "self.records.push(record);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-07",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 91,
+  "before": "self.ledger.put(account);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-08",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 94,
+  "before": "self.ledger.append(record);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-direct_access-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 38,
+  "before": "let account = self.accounts.get(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]",
+  "after": "let account = self.accounts.get(id).unwrap(); // [ENF:I4]"
+ },
+ {
+  "id": "rust_plain-remove_check-03",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 31,
+  "before": "if id.is_empty() { return Err(BankError::InvalidAccountId); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-04",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 32,
+  "before": "if self.ledger.contains(id) { return Err(BankError::DuplicateAccount); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-05",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 45,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-06",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 61,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-07",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 77,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-08",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 81,
+  "before": "if source.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-remove_check-09",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 82,
+  "before": "if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-change_comparison-03",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 45,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": "if amount != 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]"
+ },
+ {
+  "id": "rust_plain-change_comparison-04",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 61,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": "if amount != 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]"
+ },
+ {
+  "id": "rust_plain-change_comparison-05",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 77,
+  "before": "if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": "if amount != 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]"
+ },
+ {
+  "id": "rust_plain-change_comparison-06",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 81,
+  "before": "if source.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if source.balance <= amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_comparison-07",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 82,
+  "before": "if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": "if amount >= M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-04",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 82,
+  "before": "if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": "if amount > M + destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-05",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 83,
+  "before": "source.balance -= amount; // [ENF:I2]",
+  "after": "source.balance += amount; // [ENF:I2]"
+ },
+ {
+  "id": "rust_plain-change_arithmetic-06",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 84,
+  "before": "destination.balance += amount; // [ENF:I2]",
+  "after": "destination.balance -= amount; // [ENF:I2]"
+ },
+ {
+  "id": "rust_plain-delete_statement-09",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 34,
+  "before": "txn.save(Account { id: id.to_string(), balance: 0 });",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-10",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 35,
+  "before": "txn.commit();",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-11",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 49,
+  "before": "txn.save(account);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-12",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 50,
+  "before": "txn.record(TransactionRecord {\n            kind: \"deposit\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-13",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 56,
+  "before": "txn.commit();",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-14",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 65,
+  "before": "txn.save(account);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-15",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 66,
+  "before": "txn.record(TransactionRecord {\n            kind: \"withdraw\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-16",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 72,
+  "before": "txn.commit();",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-17",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 83,
+  "before": "source.balance -= amount; // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-18",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 84,
+  "before": "destination.balance += amount; // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-19",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 85,
+  "before": "txn.save(source);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-20",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 86,
+  "before": "txn.save(destination);",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-21",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 87,
+  "before": "txn.record(TransactionRecord {\n            kind: \"transfer\",\n            account: from.to_string(),\n            counterparty: to.to_string(),\n            amount,\n        });",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-delete_statement-22",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 93,
+  "before": "txn.commit();",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-ignore_error-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 48,
+  "before": "account.credit(amount)?;",
+  "after": "account.credit(amount);"
+ },
+ {
+  "id": "rust_plain-ignore_error-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 64,
+  "before": "account.debit(amount)?;",
+  "after": "account.debit(amount);"
+ },
+ {
+  "id": "rust_plain-swap_arguments-01",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 79,
+  "before": "let mut source = txn.load(from)?;",
+  "after": "let mut source = txn.load(to)?;"
+ },
+ {
+  "id": "rust_plain-swap_arguments-02",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 80,
+  "before": "let mut destination = txn.load(to)?;",
+  "after": "let mut destination = txn.load(from)?;"
+ },
+ {
+  "id": "rust_plain-swap_arguments-03",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 81,
+  "before": "if source.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": "if destination.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-swap_arguments-04",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 82,
+  "before": "if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": "if amount > M - source.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-swap_arguments-05",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 83,
+  "before": "source.balance -= amount; // [ENF:I2]",
+  "after": "destination.balance -= amount; // [ENF:I2]"
+ },
+ {
+  "id": "rust_plain-swap_arguments-06",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 84,
+  "before": "destination.balance += amount; // [ENF:I2]",
+  "after": "source.balance += amount; // [ENF:I2]"
+ },
+ {
+  "id": "rust_plain-swap_arguments-07",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 85,
+  "before": "txn.save(source);",
+  "after": "txn.save(destination);"
+ },
+ {
+  "id": "rust_plain-swap_arguments-08",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 86,
+  "before": "txn.save(destination);",
+  "after": "txn.save(source);"
+ },
+ {
+  "id": "rust_plain-swap_arguments-09",
+  "program": "rust_plain",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 87,
+  "before": "txn.record(TransactionRecord {\n            kind: \"transfer\",\n            account: from.to_string(),\n            counterparty: to.to_string(),\n            amount,\n        });",
+  "after": "txn.record(TransactionRecord {\n            kind: \"transfer\",\n            account: to.to_string(),\n            counterparty: from.to_string(),\n            amount,\n        });"
+ },
+ {
+  "id": "rust_plain-DS1",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS1",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 13,
+  "before": "if self.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-DS2",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS2",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 44,
+  "before": "pub fn deposit(&mut self, id: &str, amount: u64) -> Result<(), BankError> {\n        if amount == 0 { return Err(BankError::InvalidAmount); } // [ENF:I3]",
+  "after": "pub fn deposit(&mut self, id: &str, amount: u64) -> Result<(), BankError> {"
+ },
+ {
+  "id": "rust_plain-DS3",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS3",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 84,
+  "before": "destination.balance += amount; // [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-DS4",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS4",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 81,
+  "before": "if source.balance < amount { return Err(BankError::InsufficientFunds); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-DS5",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS5",
+  "file": "rust/bank_plain/src/repository/ledger.rs",
+  "line": 38,
+  "before": "let account = self.accounts.get(id).ok_or(BankError::AccountNotFound)?; // [ENF:I4]",
+  "after": "let account = &self.accounts[id];"
+ },
+ {
+  "id": "rust_plain-DS6",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS6",
+  "file": "rust/bank_plain/src/main.rs",
+  "line": 29,
+  "before": "let amount = amount?;\n    service.deposit(account, amount)?;",
+  "after": "let amount = -(amount? as i64);\n    service.deposit(account, amount)?;"
+ },
+ {
+  "id": "rust_plain-DS7",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS7",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 32,
+  "before": "if self.ledger.contains(id) { return Err(BankError::DuplicateAccount); } // [ENF:I4]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-DS8",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS8",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 64,
+  "before": "account.debit(amount)?;",
+  "after": "account.debit(amount);"
+ },
+ {
+  "id": "rust_plain-DS9",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS9",
+  "file": "rust/bank_plain/src/domain/account.rs",
+  "line": 19,
+  "before": "if amount > M - self.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]",
+  "after": ""
+ },
+ {
+  "id": "rust_plain-DS10",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS10",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 34,
+  "before": "Account { id: id.to_string(), balance: 0 }",
+  "after": "Account { id: id.to_string() }"
+ },
+ {
+  "id": "rust_plain-DS11",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS11",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 82,
+  "before": "if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]\n        source.balance -= amount; // [ENF:I2]",
+  "after": "source.balance -= amount; // [ENF:I2]\n        self.ledger.put(source.clone());\n        if amount > M - destination.balance { return Err(BankError::BalanceLimitExceeded); } // [ENF:I1]"
+ },
+ {
+  "id": "rust_plain-DS12",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS12",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 48,
+  "before": "account.credit(amount)?;\n        txn.save(account);\n        txn.record(TransactionRecord {\n            kind: \"deposit\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });\n        txn.commit();\n        Ok(())",
+  "after": "let credited = account.credit(amount);\n        txn.save(account);\n        txn.record(TransactionRecord {\n            kind: \"deposit\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });\n        txn.commit();\n        credited?;\n        Ok(())"
+ },
+ {
+  "id": "rust_plain-DS13",
+  "program": "rust_plain",
+  "kind": "scenario",
+  "operator": "DS13",
+  "file": "rust/bank_plain/src/services/financial_service.rs",
+  "line": 65,
+  "before": "txn.save(account);\n        txn.record(TransactionRecord {\n            kind: \"withdraw\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });\n        txn.commit();",
+  "after": "txn.save(account);\n        txn.commit();\n        txn.record(TransactionRecord {\n            kind: \"withdraw\",\n            account: id.to_string(),\n            counterparty: String::new(),\n            amount,\n        });"
+ }
+]

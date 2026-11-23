@@ -1,0 +1,14 @@
+op,account,to,amount
+create,A001,,
+create,A002,,
+create,A003,,
+deposit,A001,,100
+deposit,A002,,18446744073709551610
+transfer,A001,A002,6
+transfer,A001,A002,5
+transfer,A001,A002,1
+transfer,A003,A002,10
+transfer,A002,A001,18446744073709551615
+balance,A001,,
+balance,A002,,
+balance,A003,,

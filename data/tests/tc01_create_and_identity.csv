@@ -1,0 +1,8 @@
+op,account,to,amount
+create,A001,,
+create,A001,,
+create,,,
+create,A002,,
+balance,A001,,
+balance,X999,,
+balance,A002,,

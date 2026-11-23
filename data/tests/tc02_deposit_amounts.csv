@@ -1,0 +1,11 @@
+op,account,to,amount
+create,A001,,
+deposit,A001,,0
+deposit,A001,,-1
+deposit,A001,,-9223372036854775808
+deposit,A001,,1
+deposit,A001,,5000
+deposit,X999,,100
+deposit,X999,,-5
+deposit,X999,,0
+balance,A001,,

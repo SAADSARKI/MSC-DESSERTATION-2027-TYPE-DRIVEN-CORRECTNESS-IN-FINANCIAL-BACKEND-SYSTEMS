@@ -1,0 +1,48 @@
+{
+ "rust_typed_debug": {
+  "files": 1010,
+  "operations": 50196,
+  "crashes": 0,
+  "output_differences": 0,
+  "invariant_violations": 0,
+  "first_problems": [],
+  "accepted": true
+ },
+ "rust_typed_release": {
+  "files": 1010,
+  "operations": 50196,
+  "crashes": 0,
+  "output_differences": 0,
+  "invariant_violations": 0,
+  "first_problems": [],
+  "accepted": true
+ },
+ "rust_plain_debug": {
+  "files": 1010,
+  "operations": 50196,
+  "crashes": 0,
+  "output_differences": 0,
+  "invariant_violations": 0,
+  "first_problems": [],
+  "accepted": true
+ },
+ "rust_plain_release": {
+  "files": 1010,
+  "operations": 50196,
+  "crashes": 0,
+  "output_differences": 0,
+  "invariant_violations": 0,
+  "first_problems": [],
+  "accepted": true
+ },
+ "python": {
+  "files": 1010,
+  "operations": 50196,
+  "crashes": 0,
+  "output_differences": 0,
+  "invariant_violations": 0,
+  "first_problems": [],
+  "accepted": true
+ },
+ "_seconds": 87.1
+}

@@ -1,0 +1,722 @@
+[
+ {
+  "id": "python-change_arithmetic-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/types/money.py",
+  "line": 4,
+  "before": "M: Final[int] = 2**64 - 1  # [ENF:I1]",
+  "after": "M: Final[int] = 2**64 + 1  # [ENF:I1]"
+ },
+ {
+  "id": "python-remove_check-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/types/account_id.py",
+  "line": 12,
+  "before": "if self.value == \"\":  # [ENF:I4]\n            raise InvalidAccountId()",
+  "after": "pass"
+ },
+ {
+  "id": "python-change_comparison-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/types/account_id.py",
+  "line": 12,
+  "before": "if self.value == \"\":  # [ENF:I4]",
+  "after": "if self.value != \"\":  # [ENF:I4]"
+ },
+ {
+  "id": "python-remove_check-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/domain/account.py",
+  "line": 15,
+  "before": "if self.balance < amount:  # [ENF:I1]\n            raise InsufficientFunds()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-03",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/domain/account.py",
+  "line": 20,
+  "before": "if self.balance + amount > M:  # [ENF:I1]\n            raise BalanceLimitExceeded()",
+  "after": "pass"
+ },
+ {
+  "id": "python-change_comparison-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/domain/account.py",
+  "line": 15,
+  "before": "if self.balance < amount:  # [ENF:I1]",
+  "after": "if self.balance <= amount:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_comparison-03",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/domain/account.py",
+  "line": 20,
+  "before": "if self.balance + amount > M:  # [ENF:I1]",
+  "after": "if self.balance + amount >= M:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_arithmetic-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/domain/account.py",
+  "line": 17,
+  "before": "self.balance -= amount",
+  "after": "self.balance += amount"
+ },
+ {
+  "id": "python-change_arithmetic-03",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/domain/account.py",
+  "line": 20,
+  "before": "if self.balance + amount > M:  # [ENF:I1]",
+  "after": "if self.balance - amount > M:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_arithmetic-04",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/domain/account.py",
+  "line": 22,
+  "before": "self.balance += amount",
+  "after": "self.balance -= amount"
+ },
+ {
+  "id": "python-delete_statement-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/domain/account.py",
+  "line": 17,
+  "before": "self.balance -= amount",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/domain/account.py",
+  "line": 22,
+  "before": "self.balance += amount",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-04",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/repository/ledger.py",
+  "line": 30,
+  "before": "if acct is None:  # [ENF:I4]\n            raise AccountNotFound()",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-03",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 38,
+  "before": "self._accounts[account.id] = account",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-04",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 41,
+  "before": "self._records.append(record)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-05",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 56,
+  "before": "self._accounts.append(account)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-06",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 59,
+  "before": "self._records.append(record)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-07",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 63,
+  "before": "self._ledger.put(account)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-08",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/repository/ledger.py",
+  "line": 65,
+  "before": "self._ledger.append(record)",
+  "after": "pass"
+ },
+ {
+  "id": "python-direct_access-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "direct_access",
+  "file": "python/bank/repository/ledger.py",
+  "line": 29,
+  "before": "acct = self._accounts.get(account_id)",
+  "after": "acct = self._accounts[account_id]"
+ },
+ {
+  "id": "python-remove_check-05",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 26,
+  "before": "if self._ledger.contains(account_id):  # [ENF:I4]\n            raise DuplicateAccount()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-06",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 36,
+  "before": "if amount <= 0:  # [ENF:I3]\n            raise InvalidAmount()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-07",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 46,
+  "before": "if amount <= 0:  # [ENF:I3]\n            raise InvalidAmount()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-08",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 56,
+  "before": "if amount <= 0:  # [ENF:I3]\n            raise InvalidAmount()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-09",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 61,
+  "before": "if src.balance < amount:  # [ENF:I1]\n            raise InsufficientFunds()",
+  "after": "pass"
+ },
+ {
+  "id": "python-remove_check-10",
+  "program": "python",
+  "kind": "operator",
+  "operator": "remove_check",
+  "file": "python/bank/services/financial_service.py",
+  "line": 63,
+  "before": "if dst.balance + amount > M:  # [ENF:I1]\n            raise BalanceLimitExceeded()",
+  "after": "pass"
+ },
+ {
+  "id": "python-change_comparison-04",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/services/financial_service.py",
+  "line": 36,
+  "before": "if amount <= 0:  # [ENF:I3]",
+  "after": "if amount < 0:  # [ENF:I3]"
+ },
+ {
+  "id": "python-change_comparison-05",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/services/financial_service.py",
+  "line": 46,
+  "before": "if amount <= 0:  # [ENF:I3]",
+  "after": "if amount < 0:  # [ENF:I3]"
+ },
+ {
+  "id": "python-change_comparison-06",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/services/financial_service.py",
+  "line": 56,
+  "before": "if amount <= 0:  # [ENF:I3]",
+  "after": "if amount < 0:  # [ENF:I3]"
+ },
+ {
+  "id": "python-change_comparison-07",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/services/financial_service.py",
+  "line": 61,
+  "before": "if src.balance < amount:  # [ENF:I1]",
+  "after": "if src.balance <= amount:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_comparison-08",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_comparison",
+  "file": "python/bank/services/financial_service.py",
+  "line": 63,
+  "before": "if dst.balance + amount > M:  # [ENF:I1]",
+  "after": "if dst.balance + amount >= M:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_arithmetic-05",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/services/financial_service.py",
+  "line": 63,
+  "before": "if dst.balance + amount > M:  # [ENF:I1]",
+  "after": "if dst.balance - amount > M:  # [ENF:I1]"
+ },
+ {
+  "id": "python-change_arithmetic-06",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/services/financial_service.py",
+  "line": 65,
+  "before": "src.balance -= amount  # [ENF:I2]",
+  "after": "src.balance += amount  # [ENF:I2]"
+ },
+ {
+  "id": "python-change_arithmetic-07",
+  "program": "python",
+  "kind": "operator",
+  "operator": "change_arithmetic",
+  "file": "python/bank/services/financial_service.py",
+  "line": 66,
+  "before": "dst.balance += amount  # [ENF:I2]",
+  "after": "dst.balance -= amount  # [ENF:I2]"
+ },
+ {
+  "id": "python-delete_statement-09",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 29,
+  "before": "txn.save(Account(id=account_id, balance=0))",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-10",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 30,
+  "before": "txn.commit()",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-11",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 41,
+  "before": "txn.save(acct)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-12",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 42,
+  "before": "txn.record(TransactionRecord(\"deposit\", account_id.value, \"\", amount))",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-13",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 43,
+  "before": "txn.commit()",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-14",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 51,
+  "before": "txn.save(acct)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-15",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 52,
+  "before": "txn.record(TransactionRecord(\"withdraw\", account_id.value, \"\", amount))",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-16",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 53,
+  "before": "txn.commit()",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-17",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 65,
+  "before": "src.balance -= amount  # [ENF:I2]",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-18",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 66,
+  "before": "dst.balance += amount  # [ENF:I2]",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-19",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 67,
+  "before": "txn.save(src)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-20",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 68,
+  "before": "txn.save(dst)",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-21",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 69,
+  "before": "txn.record(TransactionRecord(\"transfer\", from_id.value, to_id.value, amount))",
+  "after": "pass"
+ },
+ {
+  "id": "python-delete_statement-22",
+  "program": "python",
+  "kind": "operator",
+  "operator": "delete_statement",
+  "file": "python/bank/services/financial_service.py",
+  "line": 70,
+  "before": "txn.commit()",
+  "after": "pass"
+ },
+ {
+  "id": "python-ignore_error-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "python/bank/services/financial_service.py",
+  "line": 40,
+  "before": "acct.credit(amount)",
+  "after": "try:\n            acct.credit(amount)\n        except BankError:\n            pass"
+ },
+ {
+  "id": "python-ignore_error-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "ignore_error",
+  "file": "python/bank/services/financial_service.py",
+  "line": 50,
+  "before": "acct.debit(amount)",
+  "after": "try:\n            acct.debit(amount)\n        except BankError:\n            pass"
+ },
+ {
+  "id": "python-swap_arguments-01",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 59,
+  "before": "src = txn.load(from_id)",
+  "after": "src = txn.load(to_id)"
+ },
+ {
+  "id": "python-swap_arguments-02",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 60,
+  "before": "dst = txn.load(to_id)",
+  "after": "dst = txn.load(from_id)"
+ },
+ {
+  "id": "python-swap_arguments-03",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 61,
+  "before": "if src.balance < amount:  # [ENF:I1]",
+  "after": "if dst.balance < amount:  # [ENF:I1]"
+ },
+ {
+  "id": "python-swap_arguments-04",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 63,
+  "before": "if dst.balance + amount > M:  # [ENF:I1]",
+  "after": "if src.balance + amount > M:  # [ENF:I1]"
+ },
+ {
+  "id": "python-swap_arguments-05",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 65,
+  "before": "src.balance -= amount  # [ENF:I2]",
+  "after": "dst.balance -= amount  # [ENF:I2]"
+ },
+ {
+  "id": "python-swap_arguments-06",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 66,
+  "before": "dst.balance += amount  # [ENF:I2]",
+  "after": "src.balance += amount  # [ENF:I2]"
+ },
+ {
+  "id": "python-swap_arguments-07",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 67,
+  "before": "txn.save(src)",
+  "after": "txn.save(dst)"
+ },
+ {
+  "id": "python-swap_arguments-08",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 68,
+  "before": "txn.save(dst)",
+  "after": "txn.save(src)"
+ },
+ {
+  "id": "python-swap_arguments-09",
+  "program": "python",
+  "kind": "operator",
+  "operator": "swap_arguments",
+  "file": "python/bank/services/financial_service.py",
+  "line": 69,
+  "before": "txn.record(TransactionRecord(\"transfer\", from_id.value, to_id.value, amount))",
+  "after": "txn.record(TransactionRecord(\"transfer\", to_id.value, from_id.value, amount))"
+ },
+ {
+  "id": "python-DS1",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS1",
+  "file": "python/bank/domain/account.py",
+  "line": 15,
+  "before": "if self.balance < amount:  # [ENF:I1]\n            raise InsufficientFunds()",
+  "after": ""
+ },
+ {
+  "id": "python-DS2",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS2",
+  "file": "python/bank/services/financial_service.py",
+  "line": 35,
+  "before": "def deposit(self, account_id: AccountId, amount: int) -> None:\n        if amount <= 0:  # [ENF:I3]\n            raise InvalidAmount()",
+  "after": "def deposit(self, account_id: AccountId, amount: int) -> None:"
+ },
+ {
+  "id": "python-DS3",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS3",
+  "file": "python/bank/services/financial_service.py",
+  "line": 66,
+  "before": "dst.balance += amount  # [ENF:I2]",
+  "after": ""
+ },
+ {
+  "id": "python-DS4",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS4",
+  "file": "python/bank/services/financial_service.py",
+  "line": 61,
+  "before": "if src.balance < amount:  # [ENF:I1]\n            raise InsufficientFunds()",
+  "after": ""
+ },
+ {
+  "id": "python-DS5",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS5",
+  "file": "python/bank/repository/ledger.py",
+  "line": 29,
+  "before": "acct = self._accounts.get(account_id)\n        if acct is None:  # [ENF:I4]\n            raise AccountNotFound()",
+  "after": "acct = self._accounts[account_id]"
+ },
+ {
+  "id": "python-DS6",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS6",
+  "file": "python/bank/services/financial_service.py",
+  "line": 35,
+  "before": "def deposit(self, account_id: AccountId, amount: int) -> None:\n        if amount <= 0:  # [ENF:I3]",
+  "after": "def deposit(self, account_id: AccountId, amount: int) -> None:\n        if amount == 0:  # [ENF:I3]"
+ },
+ {
+  "id": "python-DS7",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS7",
+  "file": "python/bank/services/financial_service.py",
+  "line": 26,
+  "before": "if self._ledger.contains(account_id):  # [ENF:I4]\n            raise DuplicateAccount()",
+  "after": ""
+ },
+ {
+  "id": "python-DS8",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS8",
+  "file": "python/bank/services/financial_service.py",
+  "line": 50,
+  "before": "acct.debit(amount)",
+  "after": "try:\n            acct.debit(amount)\n        except BankError:\n            pass"
+ },
+ {
+  "id": "python-DS9",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS9",
+  "file": "python/bank/domain/account.py",
+  "line": 20,
+  "before": "if self.balance + amount > M:  # [ENF:I1]\n            raise BalanceLimitExceeded()",
+  "after": ""
+ },
+ {
+  "id": "python-DS10",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS10",
+  "file": "python/bank/services/financial_service.py",
+  "line": 29,
+  "before": "Account(id=account_id, balance=0)",
+  "after": "Account(id=account_id)"
+ },
+ {
+  "id": "python-DS11",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS11",
+  "file": "python/bank/services/financial_service.py",
+  "line": 63,
+  "before": "if dst.balance + amount > M:  # [ENF:I1]\n            raise BalanceLimitExceeded()\n        src.balance -= amount  # [ENF:I2]",
+  "after": "src.balance -= amount  # [ENF:I2]\n        self._ledger.put(src)\n        if dst.balance + amount > M:  # [ENF:I1]\n            raise BalanceLimitExceeded()"
+ },
+ {
+  "id": "python-DS12",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS12",
+  "file": "python/bank/services/financial_service.py",
+  "line": 40,
+  "before": "acct.credit(amount)\n        txn.save(acct)\n        txn.record(TransactionRecord(\"deposit\", account_id.value, \"\", amount))\n        txn.commit()",
+  "after": "error: BankError | None = None\n        try:\n            acct.credit(amount)\n        except BankError as e:\n            error = e\n        txn.save(acct)\n        txn.record(TransactionRecord(\"deposit\", account_id.value, \"\", amount))\n        txn.commit()\n        if error is not None:\n            raise error"
+ },
+ {
+  "id": "python-DS13",
+  "program": "python",
+  "kind": "scenario",
+  "operator": "DS13",
+  "file": "python/bank/services/financial_service.py",
+  "line": 52,
+  "before": "txn.record(TransactionRecord(\"withdraw\", account_id.value, \"\", amount))\n        txn.commit()",
+  "after": "txn.commit()\n        txn.record(TransactionRecord(\"withdraw\", account_id.value, \"\", amount))"
+ }
+]

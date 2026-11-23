@@ -1,0 +1,10 @@
+{"step":0,"op":"create","status":"ok","error":null,"value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":1,"op":"create","status":"ok","error":null,"value":null,"accounts":[["A001",0],["A002",0]],"records":0,"last":null}
+{"step":2,"op":"deposit","status":"ok","error":null,"value":null,"accounts":[["A001",18446744073709551615],["A002",0]],"records":1,"last":["deposit","A001","",18446744073709551615]}
+{"step":3,"op":"withdraw","status":"ok","error":null,"value":null,"accounts":[["A001",0],["A002",0]],"records":2,"last":["withdraw","A001","",18446744073709551615]}
+{"step":4,"op":"deposit","status":"ok","error":null,"value":null,"accounts":[["A001",18446744073709551614],["A002",0]],"records":3,"last":["deposit","A001","",18446744073709551614]}
+{"step":5,"op":"transfer","status":"ok","error":null,"value":null,"accounts":[["A001",0],["A002",18446744073709551614]],"records":4,"last":["transfer","A001","A002",18446744073709551614]}
+{"step":6,"op":"withdraw","status":"error","error":"INSUFFICIENT_FUNDS","value":null,"accounts":[["A001",0],["A002",18446744073709551614]],"records":4,"last":["transfer","A001","A002",18446744073709551614]}
+{"step":7,"op":"withdraw","status":"ok","error":null,"value":null,"accounts":[["A001",0],["A002",0]],"records":5,"last":["withdraw","A002","",18446744073709551614]}
+{"step":8,"op":"balance","status":"ok","error":null,"value":0,"accounts":[["A001",0],["A002",0]],"records":5,"last":["withdraw","A002","",18446744073709551614]}
+{"step":9,"op":"balance","status":"ok","error":null,"value":0,"accounts":[["A001",0],["A002",0]],"records":5,"last":["withdraw","A002","",18446744073709551614]}

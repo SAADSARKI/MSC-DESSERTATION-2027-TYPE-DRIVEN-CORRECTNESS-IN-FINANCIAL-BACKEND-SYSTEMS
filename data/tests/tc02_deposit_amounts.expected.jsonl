@@ -1,0 +1,10 @@
+{"step":0,"op":"create","status":"ok","error":null,"value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":1,"op":"deposit","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":2,"op":"deposit","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":3,"op":"deposit","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",0]],"records":0,"last":null}
+{"step":4,"op":"deposit","status":"ok","error":null,"value":null,"accounts":[["A001",1]],"records":1,"last":["deposit","A001","",1]}
+{"step":5,"op":"deposit","status":"ok","error":null,"value":null,"accounts":[["A001",5001]],"records":2,"last":["deposit","A001","",5000]}
+{"step":6,"op":"deposit","status":"error","error":"ACCOUNT_NOT_FOUND","value":null,"accounts":[["A001",5001]],"records":2,"last":["deposit","A001","",5000]}
+{"step":7,"op":"deposit","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",5001]],"records":2,"last":["deposit","A001","",5000]}
+{"step":8,"op":"deposit","status":"error","error":"INVALID_AMOUNT","value":null,"accounts":[["A001",5001]],"records":2,"last":["deposit","A001","",5000]}
+{"step":9,"op":"balance","status":"ok","error":null,"value":5001,"accounts":[["A001",5001]],"records":2,"last":["deposit","A001","",5000]}

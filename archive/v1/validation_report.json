@@ -1,0 +1,181 @@
+{
+ "reproducibility": {
+  "same_seed_identical_files": true,
+  "different_seed_sequences_changed": 1000,
+  "sequences_total": 1000
+ },
+ "random_sequences": {
+  "files": 1000,
+  "operations": 50000,
+  "length_min_max": [
+   50,
+   50
+  ],
+  "accounts_created_min_mean_max": [
+   5,
+   12.0,
+   20
+  ],
+  "self_transfers": 0,
+  "invalid_share_overall": 0.3214,
+  "invalid_share_per_sequence_min_mean_max": [
+   0.14,
+   0.321,
+   0.54
+  ],
+  "operations_by_type": {
+   "create": 16529,
+   "deposit": 11843,
+   "balance": 8139,
+   "withdraw": 7536,
+   "transfer": 5953
+  },
+  "errors_by_code": {
+   "INSUFFICIENT_FUNDS": 4290,
+   "INVALID_AMOUNT": 4286,
+   "INVALID_ACCOUNT_ID": 2313,
+   "ACCOUNT_NOT_FOUND": 2210,
+   "DUPLICATE_ACCOUNT": 2197,
+   "BALANCE_LIMIT_EXCEEDED": 776
+  },
+  "invariant_coverage": {
+   "I1 balance reaching exactly M": 346,
+   "I1 transfer emptying the source": 365,
+   "I1 withdrawal to exactly zero": 370,
+   "I2 accepted transfer": 2557,
+   "I3 negative amount rejected": 2056,
+   "I3 zero amount rejected": 2230,
+   "I5 rejected transaction (state must not change)": 11025,
+   "I5 rejected transfer": 3396
+  },
+  "oracle_invariant_violations": 0
+ },
+ "frozen_test_cases": {
+  "files": 10,
+  "operations": 196,
+  "expected_outputs_match_oracle": true,
+  "oracle_invariant_violations": 0,
+  "boundaries": {
+   "amount 0": [
+    "tc02",
+    "tc04",
+    "tc05",
+    "tc07"
+   ],
+   "amount 1": [
+    "tc02",
+    "tc03",
+    "tc04",
+    "tc05",
+    "tc06",
+    "tc10"
+   ],
+   "negative amount": [
+    "tc02",
+    "tc04",
+    "tc05",
+    "tc10"
+   ],
+   "smallest i64 amount": [
+    "tc02",
+    "tc04",
+    "tc05"
+   ],
+   "withdraw balance - 1": [
+    "tc04"
+   ],
+   "withdraw exactly the balance": [
+    "tc04",
+    "tc07",
+    "tc09"
+   ],
+   "withdraw balance + 1": [
+    "tc04",
+    "tc07",
+    "tc09"
+   ],
+   "transfer balance - 1": [
+    "tc05"
+   ],
+   "transfer exactly the balance": [
+    "tc05",
+    "tc06",
+    "tc07",
+    "tc09",
+    "tc10"
+   ],
+   "transfer balance + 1": [
+    "tc05",
+    "tc07",
+    "tc10"
+   ],
+   "amount M": [
+    "tc03",
+    "tc06",
+    "tc07",
+    "tc09"
+   ],
+   "deposit to exactly M": [
+    "tc03",
+    "tc07",
+    "tc09"
+   ],
+   "deposit 1 above M": [
+    "tc03"
+   ],
+   "transfer destination to exactly M": [
+    "tc06"
+   ],
+   "transfer destination 1 above M": [
+    "tc06"
+   ],
+   "empty account id": [
+    "tc01"
+   ],
+   "duplicate account id": [
+    "tc01",
+    "tc07"
+   ],
+   "account that does not exist": [
+    "tc01",
+    "tc02",
+    "tc04",
+    "tc05",
+    "tc10"
+   ],
+   "missing account with invalid amount (check order)": [
+    "tc02",
+    "tc04",
+    "tc05"
+   ]
+  },
+  "boundaries_missing": []
+ },
+ "checker_self_test": {
+  "negative balance after withdrawal (DS1-like)": [
+   "I1"
+  ],
+  "accepted zero deposit (DS2-like)": [
+   "I3"
+  ],
+  "transfer without credit (DS3-like)": [
+   "I2",
+   "I5"
+  ],
+  "accepted operation on missing account (DS5-like)": [
+   "I4"
+  ],
+  "duplicate create accepted (DS7-like)": [
+   "I4"
+  ],
+  "rejected withdrawal still recorded (DS8-like)": [
+   "I5"
+  ],
+  "balance above M (DS9-like)": [
+   "I1"
+  ],
+  "deposit applied with wrong amount": [
+   "I5"
+  ]
+ }
+}

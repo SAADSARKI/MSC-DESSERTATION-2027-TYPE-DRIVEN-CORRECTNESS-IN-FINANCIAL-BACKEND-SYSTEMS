@@ -1,0 +1,14 @@
+op,account,to,amount
+create,A001,,
+deposit,A001,,50
+balance,X999,,
+deposit,X999,,1
+withdraw,X999,,1
+transfer,A001,X999,51
+transfer,X999,A001,1
+transfer,A001,X999,-3
+create,X999,,
+balance,X999,,
+transfer,A001,X999,50
+balance,X999,,
+balance,A001,,

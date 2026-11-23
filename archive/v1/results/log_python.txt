@@ -1,0 +1,64 @@
+python-remove_check-01 - testing tc01_create_and_identity.csv: wrong output at step 2; invariants broken ['I4'] first at st
+python-remove_check-02 - testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I1'] first at s
+python-remove_check-03 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I1'] first at step 2
+python-remove_check-04 - testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+python-remove_check-05 mypy testing tc01_create_and_identity.csv: crash (exit 1) AttributeError: 'NoneType' object has no attr
+python-remove_check-06 - testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I1', 'I3'] first at 
+python-remove_check-07 mypy testing tc02_deposit_amounts.csv: crash (exit 1) AttributeError: 'NoneType' object has no attribut
+python-remove_check-08 - testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+python-remove_check-09 mypy testing tc04_withdraw_boundaries.csv: crash (exit 1) AttributeError: 'NoneType' object has no attr
+python-remove_check-10 - testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I1', 'I3'] first
+python-remove_check-11 mypy testing tc05_transfer_boundaries.csv: crash (exit 1) AttributeError: 'NoneType' object has no attr
+python-remove_check-12 mypy testing tc05_transfer_boundaries.csv: crash (exit 1) AttributeError: 'NoneType' object has no attr
+python-remove_check-13 - testing tc05_transfer_boundaries.csv: wrong output at step 8; invariants broken ['I1'] first at st
+python-remove_check-14 - testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I1'] first at step 5
+python-change_comparison-01 - testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+python-change_comparison-02 - testing tc04_withdraw_boundaries.csv: wrong output at step 10
+python-change_comparison-03 - testing tc03_deposit_limit.csv: wrong output at step 1
+python-change_comparison-04 - testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+python-change_comparison-05 - testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+python-change_comparison-06 - testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I3'] first at st
+python-change_comparison-07 - testing tc05_transfer_boundaries.csv: wrong output at step 9
+python-change_comparison-08 - testing tc06_transfer_limit.csv: wrong output at step 6
+python-change_arithmetic-01 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I1'] first at step 2
+python-change_arithmetic-02 - testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-change_arithmetic-03 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I1'] first at step 2
+python-change_arithmetic-04 - testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I1', 'I5'] first at 
+python-change_arithmetic-05 - testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I1'] first at step 5
+python-change_arithmetic-06 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+python-change_arithmetic-07 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I1', 'I2', 'I5']
+python-delete_statement-01 - testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-delete_statement-02 - testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+python-delete_statement-03 - testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+python-delete_statement-04 - testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+python-delete_statement-05 - testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-delete_statement-06 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+python-delete_statement-07 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+python-delete_statement-08 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-ignore_error-01 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+python-ignore_error-02 - testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+python-direct_access-01 - testing tc01_create_and_identity.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-direct_access-02 - testing tc02_deposit_amounts.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-direct_access-03 - testing tc04_withdraw_boundaries.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-direct_access-04 - testing tc05_transfer_boundaries.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-direct_access-05 - testing tc05_transfer_boundaries.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-swap_arguments-01 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I4', 'I5'] first
+python-swap_arguments-02 mypy testing tc05_transfer_boundaries.csv: crash (exit 1) UnboundLocalError: cannot access local variab
+python-swap_arguments-03 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I4', 'I5'] first
+python-swap_arguments-04 mypy testing tc05_transfer_boundaries.csv: crash (exit 1) AttributeError: 'NoneType' object has no attr
+python-swap_arguments-05 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I1'] first at st
+python-swap_arguments-06 - testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I1'] first at step 5
+python-swap_arguments-07 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-swap_arguments-08 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-swap_arguments-09 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+python-DS1 - testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I1'] first at s
+python-DS2 - testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I1', 'I3'] first at 
+python-DS3 - testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+python-DS4 - testing tc05_transfer_boundaries.csv: wrong output at step 8; invariants broken ['I1'] first at st
+python-DS5 - testing tc04_withdraw_boundaries.csv: crash (exit 1) KeyError: AccountId(value='X999')
+python-DS6 - testing tc02_deposit_amounts.csv: wrong output at step 2; invariants broken ['I1', 'I3'] first at 
+python-DS7 - testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+python-DS8 - testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+python-DS9 - testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I1'] first at step 2
+python-DS10 mypy testing tc01_create_and_identity.csv: crash (exit 1) TypeError: Account.__init__() missing 1 requi
+done python: 126 rows in 106 s -> results/results_python.csv

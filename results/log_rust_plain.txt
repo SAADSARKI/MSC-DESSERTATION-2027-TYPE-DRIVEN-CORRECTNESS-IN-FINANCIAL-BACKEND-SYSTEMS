@@ -1,0 +1,139 @@
+rust_plain-remove_check-01 debug testing tc04_withdraw_boundaries.csv: crash (exit 101) thread 'main' (105792) panicked at bank_pla
+rust_plain-remove_check-01 release testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-remove_check-02 debug testing tc03_deposit_limit.csv: crash (exit 101) thread 'main' (106025) panicked at bank_plain/src
+rust_plain-remove_check-02 release testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-change_comparison-01 debug testing tc04_withdraw_boundaries.csv: wrong output at step 10
+rust_plain-change_comparison-01 release testing tc04_withdraw_boundaries.csv: wrong output at step 10
+rust_plain-change_comparison-02 debug testing tc03_deposit_limit.csv: wrong output at step 1
+rust_plain-change_comparison-02 release testing tc03_deposit_limit.csv: wrong output at step 1
+rust_plain-change_arithmetic-01 debug testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-change_arithmetic-01 release testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-change_arithmetic-02 debug testing tc02_deposit_amounts.csv: crash (exit 101) thread 'main' (106919) panicked at bank_plain/s
+rust_plain-change_arithmetic-02 release testing tc02_deposit_amounts.csv: wrong output at step 5
+rust_plain-change_arithmetic-03 debug testing tc02_deposit_amounts.csv: crash (exit 101) thread 'main' (107136) panicked at bank_plain/s
+rust_plain-change_arithmetic-03 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-01 debug testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-01 release testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-02 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-02 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-03 debug testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-03 release testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-04 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-04 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-05 debug testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-05 release testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-06 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-06 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-07 debug testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-07 release testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-08 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-08 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-direct_access-01 debug testing tc01_create_and_identity.csv: crash (exit 101) thread 'main' (109158) panicked at bank_pla
+rust_plain-direct_access-01 release testing tc01_create_and_identity.csv: crash (exit 101) thread 'main' (109215) panicked at bank_pla
+rust_plain-remove_check-03 debug testing tc01_create_and_identity.csv: wrong output at step 2; invariants broken ['I4'] first at st
+rust_plain-remove_check-03 release testing tc01_create_and_identity.csv: wrong output at step 2; invariants broken ['I4'] first at st
+rust_plain-remove_check-04 debug testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+rust_plain-remove_check-04 release testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+rust_plain-remove_check-05 debug testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-remove_check-05 release testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-remove_check-06 debug testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+rust_plain-remove_check-06 release testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+rust_plain-remove_check-07 debug testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I3'] first at st
+rust_plain-remove_check-07 release testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I3'] first at st
+rust_plain-remove_check-08 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (110509) panicked at bank_pla
+rust_plain-remove_check-08 release testing tc05_transfer_boundaries.csv: wrong output at step 8; invariants broken ['I2', 'I5'] first
+rust_plain-remove_check-09 debug testing tc06_transfer_limit.csv: crash (exit 101) thread 'main' (110740) panicked at bank_plain/sr
+rust_plain-remove_check-09 release testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I2', 'I5'] first at s
+rust_plain-change_comparison-03 debug testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-change_comparison-03 release testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-change_comparison-04 debug testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+rust_plain-change_comparison-04 release testing tc04_withdraw_boundaries.csv: wrong output at step 6; invariants broken ['I3'] first at st
+rust_plain-change_comparison-05 debug testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I3'] first at st
+rust_plain-change_comparison-05 release testing tc05_transfer_boundaries.csv: wrong output at step 5; invariants broken ['I3'] first at st
+rust_plain-change_comparison-06 debug testing tc05_transfer_boundaries.csv: wrong output at step 9
+rust_plain-change_comparison-06 release testing tc05_transfer_boundaries.csv: wrong output at step 9
+rust_plain-change_comparison-07 debug testing tc06_transfer_limit.csv: wrong output at step 6
+rust_plain-change_comparison-07 release testing tc06_transfer_limit.csv: wrong output at step 6
+rust_plain-change_arithmetic-04 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (112170) panicked at bank_pla
+rust_plain-change_arithmetic-04 release testing tc05_transfer_boundaries.csv: wrong output at step 11
+rust_plain-change_arithmetic-05 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-change_arithmetic-05 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-change_arithmetic-06 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (112639) panicked at bank_pla
+rust_plain-change_arithmetic-06 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-09 debug testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-09 release testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-10 debug testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-10 release testing tc01_create_and_identity.csv: wrong output at step 0; invariants broken ['I4'] first at st
+rust_plain-delete_statement-11 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-11 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-12 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-12 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-13 debug testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-13 release testing tc02_deposit_amounts.csv: wrong output at step 4; invariants broken ['I5'] first at step 4
+rust_plain-delete_statement-14 debug testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-14 release testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-15 debug testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-15 release testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-16 debug testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-16 release testing tc04_withdraw_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-17 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-17 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-18 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-18 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-19 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-19 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-20 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-20 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-delete_statement-21 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-21 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-22 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-delete_statement-22 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-ignore_error-01 debug testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-ignore_error-01 release testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-ignore_error-02 debug testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-ignore_error-02 release testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-swap_arguments-01 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I4', 'I5']
+rust_plain-swap_arguments-01 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I4', 'I5']
+rust_plain-swap_arguments-02 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I4', 'I5']
+rust_plain-swap_arguments-02 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I4', 'I5']
+rust_plain-swap_arguments-03 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (116985) panicked at bank_pla
+rust_plain-swap_arguments-03 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-swap_arguments-04 debug testing tc06_transfer_limit.csv: crash (exit 101) thread 'main' (117209) panicked at bank_plain/sr
+rust_plain-swap_arguments-04 release testing tc06_transfer_limit.csv: wrong output at step 5; invariants broken ['I2', 'I5'] first at s
+rust_plain-swap_arguments-05 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (117443) panicked at bank_pla
+rust_plain-swap_arguments-05 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-swap_arguments-06 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-swap_arguments-06 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-swap_arguments-07 debug compile_time E0382 | error[E0382]: use of moved value: `destination`
+rust_plain-swap_arguments-07 release compile_time E0382 | error[E0382]: use of moved value: `destination`
+rust_plain-swap_arguments-08 debug compile_time E0382 | error[E0382]: use of moved value: `source`
+rust_plain-swap_arguments-08 release compile_time E0382 | error[E0382]: use of moved value: `source`
+rust_plain-swap_arguments-09 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-swap_arguments-09 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I5'] first at st
+rust_plain-DS1 debug testing tc04_withdraw_boundaries.csv: crash (exit 101) thread 'main' (118191) panicked at bank_pla
+rust_plain-DS1 release testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-DS2 debug testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-DS2 release testing tc02_deposit_amounts.csv: wrong output at step 1; invariants broken ['I3'] first at step 1
+rust_plain-DS3 debug testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-DS3 release testing tc05_transfer_boundaries.csv: wrong output at step 9; invariants broken ['I2', 'I5'] first
+rust_plain-DS4 debug testing tc05_transfer_boundaries.csv: crash (exit 101) thread 'main' (118876) panicked at bank_pla
+rust_plain-DS4 release testing tc05_transfer_boundaries.csv: wrong output at step 8; invariants broken ['I2', 'I5'] first
+rust_plain-DS5 debug testing tc01_create_and_identity.csv: crash (exit 101) thread 'main' (119098) panicked at bank_pla
+rust_plain-DS5 release testing tc01_create_and_identity.csv: crash (exit 101) thread 'main' (119161) panicked at bank_pla
+rust_plain-DS6 debug compile_time E0308 | error[E0308]: mismatched types
+rust_plain-DS6 release compile_time E0308 | error[E0308]: mismatched types
+rust_plain-DS7 debug testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+rust_plain-DS7 release testing tc01_create_and_identity.csv: wrong output at step 1; invariants broken ['I4'] first at st
+rust_plain-DS8 debug testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-DS8 release testing tc04_withdraw_boundaries.csv: wrong output at step 11; invariants broken ['I5'] first at s
+rust_plain-DS9 debug testing tc03_deposit_limit.csv: crash (exit 101) thread 'main' (119874) panicked at bank_plain/src
+rust_plain-DS9 release testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-DS10 debug compile_time E0063 | error[E0063]: missing field `balance` in initializer of `Account`
+rust_plain-DS10 release compile_time E0063 | error[E0063]: missing field `balance` in initializer of `Account`
+rust_plain-DS11 debug compile_time E0499 | error[E0499]: cannot borrow `self.ledger` as mutable more than once at a time
+rust_plain-DS11 release compile_time E0499 | error[E0499]: cannot borrow `self.ledger` as mutable more than once at a time
+rust_plain-DS12 debug testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-DS12 release testing tc03_deposit_limit.csv: wrong output at step 2; invariants broken ['I5'] first at step 2
+rust_plain-DS13 debug compile_time E0382 | error[E0382]: borrow of moved value: `txn`
+rust_plain-DS13 release compile_time E0382 | error[E0382]: borrow of moved value: `txn`
+done rust_plain: 138 rows in 79 s -> results/results_rust_plain.csv
