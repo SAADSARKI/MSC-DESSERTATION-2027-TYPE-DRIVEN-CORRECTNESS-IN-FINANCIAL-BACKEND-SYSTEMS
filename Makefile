@@ -2,7 +2,8 @@
 #
 #   make setup        create .venv and install the pinned Python tools
 #   make check        build + lint + data validation + equivalence   (~2 min)
-#   make experiment   mutants + defect runs for all programs + summary (~4 min)
+#   make test         self-tests of the harness (oracle, checker, mutation tool)
+#   make experiment   mutants + defect runs for all programs + summary + figures (~4 min)
 #   make all          check, then experiment
 #
 # The Rust compiler version is pinned in rust/rust-toolchain.toml and is
@@ -22,7 +23,7 @@ MYPY := mypy
 
 PROGRAMS := rust_typed rust_plain python
 
-.PHONY: all setup check build lint validate equivalence experiment mutants defects summary clean
+.PHONY: all setup check test build lint validate equivalence experiment mutants defects summary figures clean
 
 all: check experiment
 
@@ -30,10 +31,13 @@ setup:
 	python3 -m venv .venv
 	.venv/bin/pip install --quiet -r requirements.txt
 
-check: build lint validate equivalence
+check: build lint test validate equivalence
 
 build:
 	cd rust && cargo build --quiet && cargo build --quiet --release
+
+test:
+	cd harness && $(PY) -B -m unittest discover -s tests -t . -q
 
 lint:
 	cd rust && cargo clippy --quiet --all-targets -- -D warnings
@@ -45,7 +49,7 @@ validate:
 equivalence:
 	cd harness && $(PY) equivalence.py
 
-experiment: mutants defects summary
+experiment: mutants defects summary figures
 
 mutants:
 	cd harness && $(PY) mutate.py
@@ -59,6 +63,9 @@ defects:
 
 summary:
 	cd harness && $(PY) summarise.py > /dev/null && echo "summary: results/summary.md"
+
+figures:
+	cd harness && $(PY) plots.py
 
 clean:
 	rm -rf runs rust/target harness/__pycache__ python/.mypy_cache

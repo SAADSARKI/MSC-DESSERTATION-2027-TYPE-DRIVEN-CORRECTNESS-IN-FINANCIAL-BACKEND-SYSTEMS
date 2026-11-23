@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="796" height="490" viewBox="0 0 796 490" font-family='system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", "DejaVu Sans", sans-serif'>
+<title>Defect scenarios: detection stage</title>
+<rect x="0.0" y="0.0" width="796.0" height="490.0" rx="0" fill="#fcfcfb"></rect>
+<text x="24.0" y="30.0" font-size="15" fill="#0b0b0b" text-anchor="start" font-weight="600">Defect scenarios: detection stage</text>
+<text x="24.0" y="50.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Where each defect was first stopped, per configuration (invariant at right of each name)</text>
+<rect x="24.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#2a78d6"></rect>
+<text x="39.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Rejected by the compiler</text>
+<rect x="229.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#eb6834"></rect>
+<text x="244.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Rejected by mypy --strict</text>
+<rect x="441.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#e1e0d9"></rect>
+<text x="456.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Revealed by testing</text>
+<text x="379.0" y="102.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="600">Rust-Typed</text>
+<text x="491.0" y="102.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="600">Rust-Plain</text>
+<text x="603.0" y="102.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="600">Python-Runtime</text>
+<text x="715.0" y="102.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="600">Python-Static</text>
+<text x="24.0" y="129.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS1  Withdrawal without funds check</text>
+<text x="314.0" y="129.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I1</text>
+<rect x="324.0" y="112.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS1 Withdrawal without funds check | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="128.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="112.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS1 Withdrawal without funds check | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="128.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="112.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS1 Withdrawal without funds check | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="128.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="112.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS1 Withdrawal without funds check | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="128.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="155.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS2  Zero amount accepted</text>
+<text x="314.0" y="155.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I3</text>
+<rect x="324.0" y="138.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS2 Zero amount accepted | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="154.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="138.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS2 Zero amount accepted | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="154.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="138.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS2 Zero amount accepted | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="154.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="138.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS2 Zero amount accepted | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="154.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="181.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS3  Incomplete transfer</text>
+<text x="314.0" y="181.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I2</text>
+<rect x="324.0" y="164.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS3 Incomplete transfer | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="164.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS3 Incomplete transfer | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="164.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS3 Incomplete transfer | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="164.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS3 Incomplete transfer | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="180.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="207.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS4  Transfer without funds check</text>
+<text x="314.0" y="207.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I1</text>
+<rect x="324.0" y="190.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS4 Transfer without funds check | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="206.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="190.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS4 Transfer without funds check | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="206.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="190.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS4 Transfer without funds check | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="206.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="190.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS4 Transfer without funds check | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="206.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="233.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS5  Unchecked account lookup</text>
+<text x="314.0" y="233.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I4</text>
+<rect x="324.0" y="216.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS5 Unchecked account lookup | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="232.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="216.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS5 Unchecked account lookup | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="232.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="216.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS5 Unchecked account lookup | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="232.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="216.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS5 Unchecked account lookup | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="232.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="259.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS6  Negative amount at the boundary</text>
+<text x="314.0" y="259.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I3</text>
+<rect x="324.0" y="242.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS6 Negative amount at the boundary | Rust-Typed: Rejected by the compiler</title></rect>
+<text x="379.0" y="258.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="436.0" y="242.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS6 Negative amount at the boundary | Rust-Plain: Rejected by the compiler</title></rect>
+<text x="491.0" y="258.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="548.0" y="242.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS6 Negative amount at the boundary | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="258.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="242.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS6 Negative amount at the boundary | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="258.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="285.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS7  Duplicate account identifier</text>
+<text x="314.0" y="285.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I4</text>
+<rect x="324.0" y="268.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS7 Duplicate account identifier | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="284.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="268.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS7 Duplicate account identifier | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="284.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="268.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS7 Duplicate account identifier | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="284.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="268.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS7 Duplicate account identifier | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="284.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="311.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS8  Ignored failure result</text>
+<text x="314.0" y="311.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I1, I5</text>
+<rect x="324.0" y="294.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS8 Ignored failure result | Rust-Typed: Rejected by the compiler</title></rect>
+<text x="379.0" y="310.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="436.0" y="294.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS8 Ignored failure result | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="310.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="294.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS8 Ignored failure result | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="310.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="294.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS8 Ignored failure result | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="310.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="337.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS9  Numeric overflow on deposit</text>
+<text x="314.0" y="337.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I1</text>
+<rect x="324.0" y="320.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS9 Numeric overflow on deposit | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="336.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="320.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS9 Numeric overflow on deposit | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="336.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="320.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS9 Numeric overflow on deposit | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="336.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="320.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS9 Numeric overflow on deposit | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="336.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="363.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS10  Account used before initialisation</text>
+<text x="314.0" y="363.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I1, I4</text>
+<rect x="324.0" y="346.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS10 Account used before initialisation | Rust-Typed: Rejected by the compiler</title></rect>
+<text x="379.0" y="362.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="436.0" y="346.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS10 Account used before initialisation | Rust-Plain: Rejected by the compiler</title></rect>
+<text x="491.0" y="362.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="548.0" y="346.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS10 Account used before initialisation | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="362.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="346.0" width="110.0" height="24.0" rx="0" fill="#eb6834"><title>DS10 Account used before initialisation | Python-Static: Rejected by mypy --strict</title></rect>
+<text x="715.0" y="362.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">mypy</text>
+<text x="24.0" y="389.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS11  Write outside the unit of work *</text>
+<text x="314.0" y="389.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I2, I5</text>
+<rect x="324.0" y="372.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS11 Write outside the unit of work | Rust-Typed: Rejected by the compiler</title></rect>
+<text x="379.0" y="388.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="436.0" y="372.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS11 Write outside the unit of work | Rust-Plain: Rejected by the compiler</title></rect>
+<text x="491.0" y="388.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="548.0" y="372.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS11 Write outside the unit of work | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="388.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="372.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS11 Write outside the unit of work | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="388.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="415.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS12  Commit despite a stored error *</text>
+<text x="314.0" y="415.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I5</text>
+<rect x="324.0" y="398.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS12 Commit despite a stored error | Rust-Typed: Revealed by testing</title></rect>
+<text x="379.0" y="414.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="436.0" y="398.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS12 Commit despite a stored error | Rust-Plain: Revealed by testing</title></rect>
+<text x="491.0" y="414.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="548.0" y="398.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS12 Commit despite a stored error | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="414.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="398.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS12 Commit despite a stored error | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="414.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="441.0" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal">DS13  Transaction used after commit *</text>
+<text x="314.0" y="441.0" font-size="11" fill="#898781" text-anchor="end" font-weight="normal">I5</text>
+<rect x="324.0" y="424.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS13 Transaction used after commit | Rust-Typed: Rejected by the compiler</title></rect>
+<text x="379.0" y="440.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="436.0" y="424.0" width="110.0" height="24.0" rx="0" fill="#2a78d6"><title>DS13 Transaction used after commit | Rust-Plain: Rejected by the compiler</title></rect>
+<text x="491.0" y="440.0" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="normal">compile</text>
+<rect x="548.0" y="424.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS13 Transaction used after commit | Python-Runtime: Revealed by testing</title></rect>
+<text x="603.0" y="440.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<rect x="660.0" y="424.0" width="110.0" height="24.0" rx="0" fill="#e1e0d9"><title>DS13 Transaction used after commit | Python-Static: Revealed by testing</title></rect>
+<text x="715.0" y="440.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal">test</text>
+<text x="24.0" y="474.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">* derived from the industrial reference system.  Rust: debug and release builds gave the same result.</text>
+</svg>

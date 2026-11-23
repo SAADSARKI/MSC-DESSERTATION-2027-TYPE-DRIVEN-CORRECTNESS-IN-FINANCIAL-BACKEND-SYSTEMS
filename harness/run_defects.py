@@ -32,6 +32,10 @@ from mutate import PROGRAMS, generate
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 WORK = os.path.join(ROOT, "runs")  # working copies and build output (git-ignored)
 DATA = os.path.join(ROOT, "data")
+# -B: no bytecode cache. A cached .pyc is validated only by the source's mtime
+# (whole seconds) and size, so two same-sized mutants of one file written within
+# one second would otherwise run the earlier mutant (tests/test_run_defects.py).
+PYTHON_RUNNER = [sys.executable, "-B", "-m", "bank.runner"]
 CRATE = {"rust_typed": ("bank_typed", "bank_typed_runner"), "rust_plain": ("bank_plain", "bank_plain_runner")}
 
 
@@ -126,10 +130,7 @@ def main(program: str) -> None:
             my = subprocess.run(["mypy", "--strict", "--no-incremental", "bank"], cwd=ws, capture_output=True, text=True)
             my_err = my.returncode != 0
             my_det = next((l for l in my.stdout.splitlines() if ": error:" in l), "")[:200]
-            # -B: no bytecode cache. A cached .pyc is validated only by the source's
-            # mtime (whole seconds) and size, so two same-sized mutants of one file
-            # written within one second would otherwise run the earlier mutant.
-            cls, det = test([sys.executable, "-B", "-m", "bank.runner"], ws, data)
+            cls, det = test(PYTHON_RUNNER, ws, data)
             base = dict(program=program, profile="", mutant=m.id, kind=m.kind, operator=m.operator, line=m.line,
                         before=m.before.replace("\n", " ")[:200], after=m.after.replace("\n", " ")[:200],
                         build_warnings=0, seconds=round(time.time() - t0, 2))

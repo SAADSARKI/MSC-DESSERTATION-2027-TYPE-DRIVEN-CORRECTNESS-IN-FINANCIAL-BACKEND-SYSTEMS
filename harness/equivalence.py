@@ -72,9 +72,10 @@ def main() -> None:
         res["accepted"] = res["crashes"] == res["output_differences"] == res["invariant_violations"] == 0
         summary[name] = res
         print(name, json.dumps(res))
-    summary["_seconds"] = round(time.time() - t0, 1)
-    with open(os.path.join(DATA, "equivalence_report.json"), "w") as fh:
-        json.dump(summary, fh, indent=1)
+    print(f"equivalence: {round(time.time() - t0, 1)} s")  # printed, not stored: the report stays deterministic
+    if args.limit is None:  # a partial run never replaces the full report
+        with open(os.path.join(DATA, "equivalence_report.json"), "w") as fh:
+            json.dump(summary, fh, indent=1)
     rejected = [n for n, r in summary.items() if isinstance(r, dict) and not r["accepted"]]
     if rejected:
         print("NOT ACCEPTED:", ", ".join(rejected))

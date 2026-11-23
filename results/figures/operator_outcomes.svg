@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="784" height="336" viewBox="0 0 784 336" font-family='system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Liberation Sans", "DejaVu Sans", sans-serif'>
+<title>Operator mutants: detection stage</title>
+<rect x="0.0" y="0.0" width="784.0" height="336.0" rx="0" fill="#fcfcfb"></rect>
+<text x="24.0" y="30.0" font-size="15" fill="#0b0b0b" text-anchor="start" font-weight="600">Operator mutants: detection stage</text>
+<text x="24.0" y="50.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Seven mutation operators applied at every applicable site</text>
+<rect x="24.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#2a78d6"></rect>
+<text x="39.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Rejected by the compiler</text>
+<rect x="229.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#eb6834"></rect>
+<text x="244.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Rejected by mypy --strict</text>
+<rect x="441.0" y="67.0" width="10.0" height="10.0" rx="2" fill="#e1e0d9"></rect>
+<text x="456.0" y="76.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">Revealed by testing</text>
+<line x1="154.0" y1="100" x2="154.0" y2="276" stroke="#c3c2b7" stroke-width="1"/>
+<text x="154.0" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">0</text>
+<line x1="221.8" y1="100" x2="221.8" y2="276" stroke="#e1e0d9" stroke-width="1"/>
+<text x="221.8" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">10</text>
+<line x1="289.6" y1="100" x2="289.6" y2="276" stroke="#e1e0d9" stroke-width="1"/>
+<text x="289.6" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">20</text>
+<line x1="357.4" y1="100" x2="357.4" y2="276" stroke="#e1e0d9" stroke-width="1"/>
+<text x="357.4" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">30</text>
+<line x1="425.2" y1="100" x2="425.2" y2="276" stroke="#e1e0d9" stroke-width="1"/>
+<text x="425.2" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">40</text>
+<line x1="493.0" y1="100" x2="493.0" y2="276" stroke="#e1e0d9" stroke-width="1"/>
+<text x="493.0" y="292.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">50</text>
+<text x="142.0" y="123.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">Rust-Typed</text>
+<rect x="154.0" y="108.0" width="25.1" height="22.0" rx="0" fill="#2a78d6"><title>Rust-Typed: 4 of 48 operator mutants rejected by the compiler</title></rect>
+<path d="M181.1,108.0 H475.4 Q479.4,108.0 479.4,112.0 V126.0 Q479.4,130.0 475.4,130.0 H181.1 Z" fill="#e1e0d9"><title>Rust-Typed: 44 of 48 operator mutants revealed by testing</title></path>
+<text x="489.4" y="123.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">4 compile  ·  44 test   (of 48)</text>
+<text x="142.0" y="169.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">Rust-Plain</text>
+<rect x="154.0" y="154.0" width="11.6" height="22.0" rx="0" fill="#2a78d6"><title>Rust-Plain: 2 of 56 operator mutants rejected by the compiler</title></rect>
+<path d="M167.6,154.0 H529.7 Q533.7,154.0 533.7,158.0 V172.0 Q533.7,176.0 529.7,176.0 H167.6 Z" fill="#e1e0d9"><title>Rust-Plain: 54 of 56 operator mutants revealed by testing</title></path>
+<text x="543.7" y="169.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">2 compile  ·  54 test   (of 56)</text>
+<text x="142.0" y="215.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">Python-Runtime</text>
+<path d="M154.0,200.0 H550.0 Q554.0,200.0 554.0,204.0 V218.0 Q554.0,222.0 550.0,222.0 H154.0 Z" fill="#e1e0d9"><title>Python-Runtime: 59 of 59 operator mutants revealed by testing</title></path>
+<text x="564.0" y="215.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">59 test   (of 59)</text>
+<text x="142.0" y="261.0" font-size="12" fill="#0b0b0b" text-anchor="end" font-weight="normal">Python-Static</text>
+<rect x="154.0" y="246.0" width="4.8" height="22.0" rx="0" fill="#eb6834"><title>Python-Static: 1 of 59 operator mutants rejected by mypy --strict</title></rect>
+<path d="M160.8,246.0 H550.0 Q554.0,246.0 554.0,250.0 V264.0 Q554.0,268.0 550.0,268.0 H160.8 Z" fill="#e1e0d9"><title>Python-Static: 58 of 59 operator mutants revealed by testing</title></path>
+<text x="564.0" y="261.0" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">1 mypy  ·  58 test   (of 59)</text>
+<text x="24.0" y="322.0" font-size="11" fill="#898781" text-anchor="start" font-weight="normal">Number of operator mutants. Rust: debug build shown (release identical).</text>
+</svg>

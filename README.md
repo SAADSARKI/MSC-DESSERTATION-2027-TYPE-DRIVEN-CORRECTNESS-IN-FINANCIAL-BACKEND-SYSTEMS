@@ -35,7 +35,9 @@ bank-study/
     equivalence.py                # Runs all programs on all data, checks equivalence
     mutate.py                     # 7 mutation operators + defect scenarios DS1-DS13 (SCENARIOS table)
     run_defects.py                # Runs every mutant, classifies detection stage
-    summarise.py                  # Builds the Chapter 4 tables -> results/summary.md
+    summarise.py                  # Builds the result tables -> results/summary.md
+    plots.py                      # SVG figures -> results/figures/
+    tests/                        # Self-tests of the harness (make test)
   data/                           # 10 frozen tests, 1000 sequences, manifest, reports
   results/                        # results_<program>.csv, mutants_<program>.json, logs,
                                   # summary.md, scenario_matrix.csv, operator_summary.csv,
@@ -49,11 +51,11 @@ bank-study/
 
 ```bash
 make setup        # create .venv and install the pinned Python tools (requirements.txt)
-make check        # build, clippy, mypy, data validation, equivalence      (~2 min)
-make experiment   # mutants, defect runs for all three programs, summary  (~4 min)
+make check        # build, clippy, mypy, harness self-tests, data validation, equivalence (~2 min)
+make experiment   # mutants, defect runs for all three programs, summary, figures      (~4 min)
 ```
 
-`make all` runs both. Results are written to `results/` (see `results/summary.md`); working copies and
+`make all` runs both. Results are written to `results/` (see `results/summary.md`, and the SVG figures in `results/figures/`); working copies and
 their build output go to `runs/` (git-ignored). The same `make check` runs on GitHub Actions on every push;
 the full experiment can be started from the Actions tab (workflow `ci`, "Run workflow") and its
 `results/` folder is uploaded as an artifact.
